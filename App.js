@@ -8,8 +8,6 @@ import {
 
 import { NavigationContainer, TabNavigator } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { TabView } from 'react-native-tab-view';
-import { TabBar } from 'react-native-tab-view';
 
 import screen1 from "./scrns/screen1";
 import screen2 from "./scrns/screen2";
@@ -19,13 +17,11 @@ import screen4 from "./scrns/screen4";
 
   const Tab = createMaterialTopTabNavigator();
 
-  function MyTabIndicator() {
-    return(<View style={{ backgroundColor:'white', borderRadius:17}}/>)
-  }
+  
   function MyTabs() {
     return (  
 
-      // <View style={{backgroundColor:'green'}}>
+     
       <Tab.Navigator
       
         initialRouteName="Feed"
@@ -62,7 +58,7 @@ import screen4 from "./scrns/screen4";
               borderBottomRightRadius: 20,
               height: 40
             },
-            renderIndicator: MyTabIndicator,
+            
             
          
         }}
@@ -88,7 +84,7 @@ import screen4 from "./scrns/screen4";
           options={{ tabBarLabel: 'Fruit & Veg' }}
         />
       </Tab.Navigator>
-      // </View>
+      
     );
   }
 
